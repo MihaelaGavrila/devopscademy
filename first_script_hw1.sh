@@ -16,7 +16,3 @@ echo "The files in the current working directory: $(ls)"
 #Show the current date
 echo -e "\n"
 echo "Current date: $(date)"
-
-#Show RAM
-echo -e "\nRAM available:\n"
-echo "$(free)" 
