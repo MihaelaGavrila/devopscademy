@@ -1,0 +1,15 @@
+---
+- name: Run HW_script
+  hosts: all
+  become: true
+  tasks:
+      - name: run my first script
+        ansible.builtin.shell:
+         # cmd: echo "Hello!" > proba.txt
+          cmd: sh /home/mihaela/docker/hw_2/first_script_hw1.sh
+        register: print_output
+      - name: print the content
+        ansible.builtin.debug:
+          var: print_output
+          verbosity: 2
+
